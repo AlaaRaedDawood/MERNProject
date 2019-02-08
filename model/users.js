@@ -8,9 +8,9 @@ var UserSchema =  new Schema({
     username:  { type: String, 
         required: [true,'name is required'], 
         unique: [true,'already exists'] },
-    passwordHash: { type: String, required: true },
+    password: { type: String, required: true },
     created_at: Date,
     updated_at: Date
   });
 
-  module.exports = mongoose.model('user', UserSchema);
+  module.exports = Mongoose.model('user', UserSchema);
